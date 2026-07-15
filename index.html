@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    position:relative;
+}
+
+img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#ff4d6d;
+    margin-bottom:10px;
+}
+
+p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.buttons{
+    position:relative;
+    height:100px;
+}
+
+button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#yes{
+    background:#ff4d6d;
+    color:white;
+}
+
+#yes:hover{
+    transform:scale(1.1);
+}
+
+#no{
+    background:#ddd;
+    position:absolute;
+    left:180px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- Replace this with your photo -->
+    <img src="your-photo.jpg" alt="Us">
+
+    <h1>Hey Love ❤️</h1>
+
+    <p>Do you love me forever? 🥹💕</p>
+
+    <div class="buttons">
+        <button id="yes">Yes ❤️</button>
+        <button id="no">No 💔</button>
+    </div>
+
+</div>
+
+<script>
+
+const noBtn=document.getElementById("no");
+
+noBtn.addEventListener("mouseover",()=>{
+
+const x=Math.random()*250;
+const y=Math.random()*70;
+
+noBtn.style.left=x+"px";
+noBtn.style.top=y+"px";
+
+});
+
+document.getElementById("yes").onclick=()=>{
+
+document.body.innerHTML=`
+<div style="
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:#ffe6eb;
+font-family:Arial;
+text-align:center;
+">
+
+<h1 style="font-size:55px;color:#ff4d6d;">
+Yayyy!! ❤️🥹
+</h1>
+
+<h2>I knew you love me forever! 💍💕</h2>
+
+<div style="font-size:90px;">🥰💖🌹</div>
+
+</div>
+`;
+
+};
+
+</script>
+
+</body>
+</html>
